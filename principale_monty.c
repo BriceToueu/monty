@@ -8,7 +8,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-/* char **op_toks = NULL; */
+char **op_toks = NULL;
 
 /**
  * main - le point d'entrée de Monty Interp
