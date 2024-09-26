@@ -34,13 +34,13 @@ void monty_pchar(stack_t **stack, unsigned int line_number)
 {
 	if ((*stack)->next == NULL)
 	{
-		code_erreur_op_toks(erreur_pchar(line_number, "pile vide"));
+		code_erreur_op_toks(erreur_pchar(line_number, "stack empty"));
 		return;
 	}
 	if ((*stack)->next->n < 0 || (*stack)->next->n > 127)
 	{
 		code_erreur_op_toks(erreur_pchar(line_number,
-					     "valeur hors plage"));
+					     "value out of range"));
 		return;
 	}
 

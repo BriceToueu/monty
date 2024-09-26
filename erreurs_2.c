@@ -48,7 +48,7 @@ int erreur_pint(unsigned int line_number)
  */
 int erreur_pile_courte(unsigned int line_number, char *op)
 {
-	fprintf(stderr, "L%u: ne peut pas %s, pile trop courte\n", line_number, op);
+	fprintf(stderr, "L%u: can't %s, stack too short\n", line_number, op);
 	return (EXIT_FAILURE);
 }
 
@@ -62,7 +62,7 @@ int erreur_pile_courte(unsigned int line_number, char *op)
  */
 int erreur_div(unsigned int line_number)
 {
-	fprintf(stderr, "L%u: division par zéro\n", line_number);
+	fprintf(stderr, "L%u: division by zero\n", line_number);
 	return (EXIT_FAILURE);
 }
 
@@ -76,6 +76,6 @@ int erreur_div(unsigned int line_number)
  */
 int erreur_pchar(unsigned int line_number, char *message)
 {
-	fprintf(stderr, "L%u: ne peut être pchar, %s\n", line_number, message);
+	fprintf(stderr, "L%u: can't pchar, %s\n", line_number, message);
 	return (EXIT_FAILURE);
 }

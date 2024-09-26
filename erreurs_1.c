@@ -18,7 +18,7 @@ int erreur_arg_nv(unsigned int line_number);
  */
 int erreur_utilisation(void)
 {
-	fprintf(stderr, "USAGE: fichier monty\n");
+	fprintf(stderr, "USAGE: monty file\n");
 	return (EXIT_FAILURE);
 }
 
@@ -29,7 +29,7 @@ int erreur_utilisation(void)
  */
 int erreur_malloc(void)
 {
-	fprintf(stderr, "Erreur: malloc a échoué\n");
+	fprintf(stderr, "Error: malloc failed\n");
 	return (EXIT_FAILURE);
 }
 
@@ -42,7 +42,7 @@ int erreur_malloc(void)
  */
 int erreur_ouv_f(char *filename)
 {
-	fprintf(stderr, "Erreur : Impossible d'ouvrir le fichier %s\n", filename);
+	fprintf(stderr, "Error: Can't open file %s\n", filename);
 	return (EXIT_FAILURE);
 }
 
@@ -56,7 +56,7 @@ int erreur_ouv_f(char *filename)
  */
 int erreur_ins_in(char *opcode, unsigned int line_number)
 {
-	fprintf(stderr, "L%u: instruction inconnue %s\n",
+	fprintf(stderr, "L%u: unknown instruction %s\n",
 		line_number, opcode);
 	return (EXIT_FAILURE);
 }
@@ -71,6 +71,6 @@ int erreur_ins_in(char *opcode, unsigned int line_number)
  */
 int erreur_arg_nv(unsigned int line_number)
 {
-	fprintf(stderr, "L%u: usage: insérer un nombre entier\n", line_number);
+	fprintf(stderr, "L%u: usage: push integer\n", line_number);
 	return (EXIT_FAILURE);
 }
